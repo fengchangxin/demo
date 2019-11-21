@@ -7,5 +7,6 @@ package com.project.demo.method;
  */
 @FunctionalInterface
 public interface Study {
-    void study();
+    Student study(String name);
+
 }

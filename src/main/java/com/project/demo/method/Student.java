@@ -15,15 +15,23 @@ public class Student {
         this.name = name;
     }
 
-    public String getName() {
-        return name;
+    /**
+     * 静态方法
+     *
+     * @param name
+     * @return
+     */
+    public static Student create(String name) {
+        return new Student(name);
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public static void show(Student student) {
-        System.out.println(student.getName());
+    /**
+     * 对象方法
+     *
+     * @param s
+     * @return
+     */
+    public Student get(String s) {
+        return new Student(s);
     }
 }
