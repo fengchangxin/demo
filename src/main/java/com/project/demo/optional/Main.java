@@ -2,6 +2,7 @@ package com.project.demo.optional;
 
 import com.alibaba.fastjson.JSON;
 
+import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 
 /**
@@ -22,7 +23,18 @@ public class Main {
 
         user.setAddress(address);
 
-        System.out.println(JSON.toJSONString(user));
-        //{"address":{"country":{"country":"zh"},"mail":"xxxx.com"}}
+        if (user != null) {
+            Address a = user.getAddress();
+            if (a != null) {
+                Country c = a.getCountry();
+                if (c != null) {
+                    //TODO
+                }
+            }
+        }
+
+
+        System.out.println(Optional.ofNullable(user).map(User::getAddress).map(Address::getCountry)
+                .map(Country::getCountry).orElse(null));
     }
 }
