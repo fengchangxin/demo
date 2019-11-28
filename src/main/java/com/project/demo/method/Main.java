@@ -22,5 +22,6 @@ public class Main {
         //对象方法
         Student student = new Student();
         Study s4 = student::get;
+
     }
 }
