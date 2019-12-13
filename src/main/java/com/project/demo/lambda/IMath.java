@@ -28,6 +28,7 @@ public interface IMath {
      * @param a
      */
     default void add(int a) {
+        System.out.println("dfffffff");
     }
 
     /**
@@ -36,7 +37,7 @@ public interface IMath {
      * @param a
      * @param b
      */
-    public static void add(int a, int b) {
-
+    static void add(int a, int b) {
+        System.out.println("dfdfd");
     }
 }

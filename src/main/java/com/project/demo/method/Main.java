@@ -6,6 +6,9 @@ package com.project.demo.method;
  * @description:
  */
 
+import com.project.demo.lambda.IMath;
+import com.project.demo.lambda.Math;
+
 /**
  * 方法引用，也是lambda，只调用其他的一个方法时使用，需要返回类型和参数对应
  */
@@ -22,6 +25,8 @@ public class Main {
         //对象方法
         Student student = new Student();
         Study s4 = student::get;
+
+
 
     }
 }
